@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <!--Introduction Page-->
+        <div class="header">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="showText">
+                <h1>DEPANDEV</h1>
+            </div>
+        </div>
+    
+        <div class="nameline">
+        <div class="name">
+            <h1>DEPANDEV <img src="img/cromastar.png" alt=""></h1>
+        </div>
+        <div class="line"></div>
+        <div class="About">
+            <p>DepanDev was created on oktober 2024.<br>
+               Because interested on Front-end development, i will be productive on every sunday<br>
+               in every sunday i will deploy some project.</p>
+        </div>
+        <div class="About2">
+            <p>Im a Front-End Developer passionate about creating interactive and dynamic web experiences.<br>
+                My journey into web development started in 2022 when I decided to explore the world of coding. Since then,<br>
+                I have been constantly learning new technologies and working on various personal projects to enhance my skills.  
+            </p>
+        </div>
+    
+        <div class="fotologo">
+            <img src="img/logo.png" alt="">
+        </div>
+    </div>
+    <!--Hobby Page-->
+    <div class="titl">
+        <div class="Title">
+            <h1>MY HOBBY</h1>
+        </div>
+        <div class="line2"></div>
+        <div class="hobby">
+            <p>My hobby is Designing, and Programming.<br>
+               One of my favorite is when i have imagination to make this hobby into real thing.  
+            </p>
+        </div>
+        <div class="hobby2">
+            <p>In 2022 i've learned about designing and programming.<br>
+               Because of my habit of being in front of the laptop all day<br>
+               Interestingly, my love of design complements my work as a web designer.<br>
+               This allows me to bring a unique visual perspective to my design projects,<br>
+               ensuring that every element of my sites is thoughtfully crafted and engaging.
+            </p>
+        </div>
+    </div>
+    <div class="poto">
+        <img src="img/programming.png" alt="">
+        <div class="icon">
+            <img src="img/html.png" alt="">
+        </div>
+        <div class="icon2">
+            <img src="img/css.png" alt="">
+        </div>
+    </div>
+    <div class="poto2">
+        <img src="img/lumi.png" alt="">
+        <div class="icon3">
+            <img src="img/brush.png" alt="">
+        </div>
+    </div>
+    <!--Project Page-->
+    <div class="container3">
+    <div class="Judul">
+        <h1>MY PROJECT</h1>
+    </div>
+    <div class="line3"></div>
+    <div class="link">https://github.com/prismaaryadwi</div>
+    <div class="banner">
+        <img src="img/silo.png" alt="">
+    </div>
+    <div class="banner2">
+        <img src="img/Experience.png" alt="">
+    </div>
+
+    <div class="aboutProject">
+        <p>This is a project I made a week and 2 weeks ago.<br>
+           I usually make it with html and css. But if I need more programming languages I will use them.<br>
+           This project is a depiction of a poster design that I turned into a website.</p>
+    </div>
+</div>
+</body>
+
+<script>
+    // Fungsi untuk mengamati elemen yang ingin kita animasikan
+    function observeElements() {
+        const options = {
+            root: null, // Menggunakan viewport sebagai root
+            threshold: 0.1 // Berapa persen elemen terlihat sebelum dianggap masuk viewport (10%)
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible'); // Tambahkan class ketika elemen masuk viewport
+                } else {
+                    entry.target.classList.remove('visible'); // Hapus class ketika elemen keluar dari viewport
+                }
+            });
+        }, options);
+
+        // Elemen yang ingin diobservasi
+        const hobbies = document.querySelectorAll('.hobby, .hobby2');
+        hobbies.forEach(hobby => {
+            observer.observe(hobby); // Observasi setiap elemen
+        });
+    }
+
+    // Jalankan fungsi ketika halaman siap
+    document.addEventListener('DOMContentLoaded', observeElements);
+</script>
+
+<script>
+    // Fungsi untuk mengamati elemen yang ingin kita animasikan
+    function observeElements() {
+        const options = {
+            root: null, // Menggunakan viewport sebagai root
+            threshold: 0.1 // Berapa persen elemen terlihat sebelum dianggap masuk viewport (10%)
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('muncul'); // Tambahkan class ketika elemen masuk viewport
+                } else {
+                    entry.target.classList.remove('muncul'); // Hapus class ketika elemen keluar dari viewport
+                }
+            });
+        }, options);
+
+        // Elemen yang ingin diobservasi
+        const hobbies = document.querySelectorAll('.aboutProject');
+        hobbies.forEach(hobby => {
+            observer.observe(hobby); // Observasi setiap elemen
+        });
+    }
+
+    // Jalankan fungsi ketika halaman siap
+    document.addEventListener('DOMContentLoaded', observeElements);
+</script>
+
+
+</html>
