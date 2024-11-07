@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
 
 * {
     margin: 0;
@@ -102,7 +103,7 @@ body {
     margin-top: 4%;
     margin-left: 6%;
     -webkit-animation: rotate-scale-up 2s linear infinite both;
-	animation: rotate-scale-up 2s linear infinite both;
+	  animation: rotate-scale-up 2s linear infinite both;
     z-index: 999999;
 }
 
@@ -162,7 +163,7 @@ body {
   .fotologo {
     position: absolute;
     margin-left: 65%;
-    margin-top: 5%;
+    margin-top: 8%;
     animation: floating 2s ease-in-out infinite;
   }
 
@@ -435,6 +436,60 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
+/*footer*/
+.footer {
+  background-color: rgb(27, 27, 27);
+  padding-bottom: 20%;
+}
+
+.contact h1 {
+  position: relative;
+  color: rgb(243, 243, 243);
+  font-family: Oswald;
+  font-size: 100px;
+  font-weight: 400;
+  margin-left: 5%;
+  margin-top: 5%;
+  cursor: pointer;
+  width: 27%;
+}
+
+.contact a {
+  display: block;
+  margin-left: 30%;
+  color: rgb(243, 243, 243);
+  font-family:Helvetica light;
+  font-size: 50px;
+  line-height: 200%;
+  text-decoration: none;
+  width: 235px;
+  transition: ease-in-out 0.5s;
+}
+
+.circle {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.contact h1:hover .circle {
+  width: 80px;
+  height: 80px;
+}
+
+.contact a:hover {
+  transform: translateX(50px);
+  color: rgb(138, 138, 138);
+}
+
+.span {
+  font-family: imperial script;
+  font-weight: 400;
+}
   
   /* Tombol scroll ke atas */
 .scroll-top {
@@ -460,6 +515,7 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
+  display: none;
     width: 10px;
 }
 
@@ -475,3 +531,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(243, 243, 243);
 }
+
