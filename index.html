@@ -88,27 +88,36 @@
     </div>
 
     <div class="aboutProject">
-        <p>This is a project I made a week and 2 weeks ago.<br>
+        <p>This is my project.<br>
            I usually make it with html and css. But if I need more programming languages I will use them.<br>
            This project is a depiction of a poster design that I turned into a website.</p>
     </div>
 </div>
 </body>
 
+<footer class="footer">
+    <div class="contact">
+        <h1>Contact <span class="span">Me</span> &#8600</h1>
+        <a href="https://www.instagram.com/aryadwi_060911/" target="_blank">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="https://x.com/AryaDwi65406" target="_blank">Twitter X</a>
+    </div>
+</footer>
+
 <script>
-    // Fungsi untuk mengamati elemen yang ingin kita animasikan
+
     function observeElements() {
         const options = {
-            root: null, // Menggunakan viewport sebagai root
-            threshold: 0.1 // Berapa persen elemen terlihat sebelum dianggap masuk viewport (10%)
+            root: null,
+            threshold: 0.1
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible'); // Tambahkan class ketika elemen masuk viewport
+                    entry.target.classList.add('visible');
                 } else {
-                    entry.target.classList.remove('visible'); // Hapus class ketika elemen keluar dari viewport
+                    entry.target.classList.remove('visible');
                 }
             });
         }, options);
@@ -116,41 +125,86 @@
         // Elemen yang ingin diobservasi
         const hobbies = document.querySelectorAll('.hobby, .hobby2');
         hobbies.forEach(hobby => {
-            observer.observe(hobby); // Observasi setiap elemen
+            observer.observe(hobby);
         });
     }
 
-    // Jalankan fungsi ketika halaman siap
+
     document.addEventListener('DOMContentLoaded', observeElements);
 </script>
 
 <script>
-    // Fungsi untuk mengamati elemen yang ingin kita animasikan
+
     function observeElements() {
         const options = {
-            root: null, // Menggunakan viewport sebagai root
-            threshold: 0.1 // Berapa persen elemen terlihat sebelum dianggap masuk viewport (10%)
+            root: null,
+            threshold: 0.1
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('muncul'); // Tambahkan class ketika elemen masuk viewport
+                    entry.target.classList.add('muncul');
                 } else {
-                    entry.target.classList.remove('muncul'); // Hapus class ketika elemen keluar dari viewport
+                    entry.target.classList.remove('muncul');
                 }
             });
         }, options);
 
-        // Elemen yang ingin diobservasi
+    
         const hobbies = document.querySelectorAll('.aboutProject');
         hobbies.forEach(hobby => {
-            observer.observe(hobby); // Observasi setiap elemen
+            observer.observe(hobby);
         });
     }
 
-    // Jalankan fungsi ketika halaman siap
+
     document.addEventListener('DOMContentLoaded', observeElements);
+</script>
+
+<script>
+    const contactH1 = document.querySelector('.contact h1');
+
+contactH1.addEventListener('mousemove', (e) => {
+  let circle = document.querySelector('.circle');
+  if (!circle) {
+    circle = document.createElement('div');
+    circle.classList.add('circle');
+    contactH1.appendChild(circle);
+  }
+  
+  const rect = contactH1.getBoundingClientRect();
+  circle.style.left = `${e.clientX - rect.left - circle.offsetWidth / 2}px`;
+  circle.style.top = `${e.clientY - rect.top - circle.offsetHeight / 2}px`;
+});
+
+contactH1.addEventListener('mouseleave', () => {
+  const circle = document.querySelector('.circle');
+  if (circle) circle.remove();
+});
+
+</script>
+
+<script>
+    const contacta = document.querySelector('.contact a');
+
+contactH1.addEventListener('mousemove', (e) => {
+  let circle = document.querySelector('.circle');
+  if (!circle) {
+    circle = document.createElement('div');
+    circle.classList.add('circle');
+    contactH1.appendChild(circle);
+  }
+  
+  const rect = contactH1.getBoundingClientRect();
+  circle.style.left = `${e.clientX - rect.left - circle.offsetWidth / 2}px`;
+  circle.style.top = `${e.clientY - rect.top - circle.offsetHeight / 2}px`;
+});
+
+contactH1.addEventListener('mouseleave', () => {
+  const circle = document.querySelector('.circle');
+  if (circle) circle.remove();
+});
 </script>
 
 
